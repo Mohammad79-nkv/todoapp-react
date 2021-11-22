@@ -16,7 +16,9 @@ const AddNewTask = () => {
                         className="form-control rounded"
                         placeholder="اضافه کردن کار جدید"
                         value={context.todo}
-                        onChange={context.handleTodoInput}
+                        onChange={(e)=>{
+                            console.log(e.target.value);
+                            context.handleTodoInput(e)}}
                     />
                     <div className="input-group-prepend">
                         <button
